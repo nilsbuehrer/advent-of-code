@@ -1,28 +1,25 @@
-// Day n: title
-// Part One/Two
-const { input } = require("./input.js");
-const { run } = require("../../util/run.js");
+// Day 1
+// Part Two
+const { input } = require("./input.js")
+const { run } = require("../../util/run.js")
 
 const func = () => {
-  let output;
-  // let operations = 0; // count the number of operations
+  let output
 
-  // TODO: add code here
-  console.log(input);
-  arr = input.split("\n").map(x=>+x);
+  numbers = input.split("\n").map(x => +x)
 
-  arr.forEach(i => {
-    arr.forEach(j => {
-      arr.forEach(k => {
-        if(i + j + k == 2020) {
-          output = i * j * k;
+  numbers.forEach(n1 => {
+    numbers.forEach(n2 => {
+      numbers.forEach(n3 => {
+        if (n1 + n2 + n3 === 2020) {
+          output = n1 * n2 * n3
         }
-      });
-    });
-  });
+      })
+    })
+  })
 
-  return { output /*, operations */ };
+  return { output }
 };
 
 // output:
-run(func);
+run(func)
