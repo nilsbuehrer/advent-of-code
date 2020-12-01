@@ -1,5 +1,5 @@
-// Day 1: Report Repair
-// Part One
+// Day n: title
+// Part One/Two
 const { input } = require("./input.js");
 const { run } = require("../../util/run.js");
 
@@ -7,21 +7,20 @@ const func = () => {
   let output;
   // let operations = 0; // count the number of operations
 
-  const entries = input.split("\n").map((e) => Number(e));
+  // TODO: add code here
+  console.log(input);
+  arr = input.split("\n").map(x=>+x);
 
-  for (let i = 0; i < entries.length; i++) {
-    for (let j = i + 1; j < entries.length; j++) {
-      // operations += 1;
-      if (entries[i] + entries[j] === 2020) {
-        output = entries[i] * entries[j];
-        break;
+  arr.forEach(i => {
+    arr.forEach(j => {
+      if(i + j == 2020) {
+        output = i * j;
       }
-    }
-    if (output) break;
-  }
+    });
+  });
 
   return { output /*, operations */ };
 };
 
-// output: 157059
+// output:
 run(func);
