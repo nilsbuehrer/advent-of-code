@@ -13,9 +13,9 @@ const func = () => {
   lineLength = entries[0].length
 
   for (let i = 0; i < entries.length; i++) {
-    const pos = ((i*3 + 1) % lineLength) - 1
+    const pos = ((i*3) % lineLength)
     const e = entries[i]
-    
+
     if (e.substr(pos, 1) === "#") {
       treeCount++
     }
@@ -24,7 +24,7 @@ const func = () => {
   output = treeCount
 
   return { output }
-};
+}
 
 // output:
 run(func)
