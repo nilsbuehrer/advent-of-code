@@ -7,20 +7,20 @@ const func = () => {
   let output = 1
   let treeCount = 0
 
-  entries = input.split("\n")
-  lineLength = entries[0].length
+  const entries = input.split("\n")
+  const lineLength = entries[0].length
 
-  commands = [[1, 1], [3, 1], [5, 1], [7, 1], [1, 2]]
+  const commands = [[1, 1], [3, 1], [5, 1], [7, 1], [1, 2]]
 
   commands.forEach(c => {
-    right = c[0]
-    down = c[1]
+    const right = c[0]
+    const down = c[1]
 
     for (let i = 0, j = 0; i < entries.length; i += down, j++) {
       const pos = ((j*right) % lineLength)
       const e = entries[i]
       
-      if (e.substr(pos, 1) === "#") {
+      if (e[pos] === "#") {
         treeCount++
       }
     }

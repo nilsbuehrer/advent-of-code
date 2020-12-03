@@ -4,24 +4,21 @@ const { input } = require("./input.js")
 const { run } = require("../../util/run.js")
 
 const func = () => {
-  let output
+  let treeCount = 0
 
-  treeCount = 0
-
-  entries = input.split("\n")
-
-  lineLength = entries[0].length
+  const entries = input.split("\n")
+  const lineLength = entries[0].length
 
   for (let i = 0; i < entries.length; i++) {
     const pos = ((i*3) % lineLength)
     const e = entries[i]
 
-    if (e.substr(pos, 1) === "#") {
+    if (e[pos] === "#") {
       treeCount++
     }
   }
 
-  output = treeCount
+  const output = treeCount
 
   return { output }
 }
