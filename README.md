@@ -7,7 +7,7 @@ This repo contains my solutions for the [Advent of Code](https://adventofcode.co
 Run with Node.js:
 
 ```bash
-node 2020/day_01/part_1.js
+node 2021/day_01/part_1.js
 ```
 
 The following output should be printed:
